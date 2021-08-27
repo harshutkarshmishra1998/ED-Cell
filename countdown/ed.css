@@ -1,0 +1,354 @@
+.header2{
+    position: relative;
+    top:0;
+    left:0;
+    width:100%;
+    padding:40px 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:1;
+    background: blue;
+}
+
+section{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    padding:0 100px;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+section .contentBox{
+    position: relative;
+    max-width: 600px;
+    z-index:1000;
+    padding-top: 60px;
+}
+
+section .contentBox h2{
+    font-size: 60px;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+section .contentBox p{
+    font-size: 18px;
+    color:#fff;
+}
+
+section .contentBox .countDown{
+    display:flex;
+    margin:20px 0;
+}
+
+section .contentBox .countDown .time{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:#fff;
+    margin-right: 20px;
+    font-size: 48px;
+    min-width: 110px;
+    font-weight: 700;
+    padding: 10px 5px 15px;
+    border-radius: 4px;
+    color:#ff0083;
+}
+
+section .contentBox .countDown .time span{
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 600;
+    color:#312747;
+}
+
+section .contentBox a{
+    position: relative;
+    margin-top:10px;
+    display: inline-block;
+    background:green;
+    color:#fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding:15px 35px;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+section .imgBox img{
+    max-width: 500px;
+    width:100%;
+    z-index: 2;
+    position: relative;
+}
+
+.wave{
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+section .sci{
+    position:absolute;
+    bottom:40px;
+    left:100px;
+    z-index:1000;
+    display:flex;
+    justify-content: center;
+    filter:invert(1);
+}
+
+section .sci{
+    list-style: none;
+}
+
+section .sci li a{
+    display:block;
+    margin-right: 20px;
+    transform:scale(0.8);
+}
+
+.newsletter{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    widows: 600px;
+    padding:60px;
+    background:#fff;
+    z-index: 10000;
+    visibility: hidden;
+    opacity: 0;
+    transition:0.5s;
+    box-shadow: 0 0 0 100vh rgba(49,39,71,0.95);
+}
+
+.newsletter.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.newsletter h2{
+    font-size:48px;
+    color:#312747;
+}
+
+.newsletter p{
+    font-size:20px;
+    color:#312747;
+}
+
+.newsletter .inputBox{
+    margin-top: 20px;
+}
+
+.newsletter .inputBox input{
+    padding:10px;
+    outline:none;
+    widows: 300px;
+    font-size: 18px;
+    border:1px solid #999;
+}
+
+.newsletter .inputBox input[type="submit"]{
+    padding:10px;
+    outline:none;
+    widows: 140px;
+    border:1px solid #999;
+    color:#fff;
+    background:#ff0083;
+    letter-spacing:2px;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+
+.newsletter .close{
+    position:absolute;
+    width:40px;
+    height:40px;
+    top:20px;
+    right:20px;
+    cursor:pointer;
+}
+
+@media (max-width:991px){
+    section {
+        flex-direction: column;
+        padding-top:150px;
+        height:auto;
+    }
+    section .contentBox{
+        max-width: 100%;
+    }
+    section imgBox img{
+        margin-top:0;
+    }
+}
+
+@media (max-width:767px){
+    header{
+        padding:20px 50px;
+    }
+    section {
+        flex-direction: column;
+        padding-top:120px 50px 100px;
+        height:auto;
+    }
+    section .contentBox h2{
+        font-size:40px;
+    }
+    section .contentBox p{
+        font-size:16px;
+    }
+    section .contentBox .countDown .time{
+        font-size:30px;
+        min-width: 70px;
+        margin-right: 5px;
+    }
+    section .contentBox .countDown .time span{
+        font-size:14px;
+    }
+}
+
+
+
+
+
+
+
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.contentnav{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: black;
+  color: white;
+  opacity:0.8;
+  padding: 5px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .contentnav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logonav a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbar .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: #007bff;
+}
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  float:right;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  section .imgBox{
+    display: none;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+  .navbar.show .menu-list{
+    left: 0%;
+  }
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar .logo a{
+    font-size: 27px;
+  }
+}
